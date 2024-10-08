@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, CheckCircle, Smartphone, Zap, Shield } from "lucide-react";
 import image from "./image.jpg";
-import { FadeIn } from "@/app/page";
 
 export default function MarketingHomepage() {
   return (
@@ -50,53 +49,43 @@ export default function MarketingHomepage() {
           <div className="container mx-auto px-4">
             <div className="flex gap-12">
               <div className="flex w-1/2 flex-col justify-center space-y-6">
-                <FadeIn delay={0.2}>
-                  <h1 className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-5xl font-bold tracking-tighter text-transparent">
-                    Revolutionize Your Mobile Experience
-                  </h1>
-                </FadeIn>
-                <FadeIn delay={0.4}>
-                  <p className="max-w-md text-xl text-gray-600 dark:text-gray-300">
-                    Discover a new way to interact with your smartphone. Our app
-                    brings cutting-edge features to your fingertips.
+                <h1 className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-5xl font-bold tracking-tighter text-transparent">
+                  Revolutionize Your Mobile Experience
+                </h1>
+                <p className="max-w-md text-xl text-gray-600 dark:text-gray-300">
+                  Discover a new way to interact with your smartphone. Our app
+                  brings cutting-edge features to your fingertips.
+                </p>
+                <div className="max-w-md space-y-4">
+                  <form className="flex space-x-2">
+                    <Input
+                      className="flex-1"
+                      placeholder="Enter your email"
+                      type="email"
+                    />
+                    <Button
+                      type="submit"
+                      className="bg-purple-600 text-white hover:bg-purple-700"
+                    >
+                      Get Started
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </form>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Start your free trial. No credit card required.
                   </p>
-                </FadeIn>
-                <FadeIn delay={1}>
-                  <div className="max-w-md space-y-4">
-                    <form className="flex space-x-2">
-                      <Input
-                        className="flex-1"
-                        placeholder="Enter your email"
-                        type="email"
-                      />
-                      <Button
-                        type="submit"
-                        className="bg-purple-600 text-white hover:bg-purple-700"
-                      >
-                        Get Started
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </form>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Start your free trial. No credit card required.
-                    </p>
-                  </div>
-                </FadeIn>
+                </div>
               </div>
               <div className="flex w-1/2 items-center justify-center">
-                <FadeIn delay={1}>
-                  <div className="relative h-[43rem] w-[21rem]">
-                    <Image
-                      src={image.src}
-                      // src="/placeholder.svg?height=700&width=350"
-                      alt="App mockup"
-                      className="rounded-3xl object-cover shadow-2xl"
-                      // fill
-                      height={image.height}
-                      width={image.width}
-                    />
-                  </div>
-                </FadeIn>
+                <div className="relative h-[43rem] w-[21rem]">
+                  <Image
+                    src={image.src}
+                    alt="App mockup"
+                    className="rounded-3xl object-cover shadow-2xl"
+                    height={image.height}
+                    width={image.width}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -107,48 +96,41 @@ export default function MarketingHomepage() {
               Key Features
             </h2>
             <div className="grid grid-cols-3 gap-8">
-              <FadeIn delay={0.3}>
-                <div className="flex flex-col items-center space-y-4 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-700">
-                  <div className="rounded-full bg-purple-600 p-3">
-                    <Zap className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-300">
-                    Lightning Fast
-                  </h3>
-                  <p className="text-center text-gray-600 dark:text-gray-300">
-                    Experience unparalleled speed with our optimized
-                    performance.
-                  </p>
+              <div className="flex flex-col items-center space-y-4 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-700">
+                <div className="rounded-full bg-purple-600 p-3">
+                  <Zap className="h-8 w-8 text-white" />
                 </div>
-              </FadeIn>
-              <FadeIn delay={0.6}>
-                <div className="flex flex-col items-center space-y-4 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-700">
-                  <div className="rounded-full bg-purple-600 p-3">
-                    <CheckCircle className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-300">
-                    User-Friendly
-                  </h3>
-                  <p className="text-center text-gray-600 dark:text-gray-300">
-                    Intuitive design ensures a smooth and enjoyable user
-                    experience.
-                  </p>
+                <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-300">
+                  Lightning Fast
+                </h3>
+                <p className="text-center text-gray-600 dark:text-gray-300">
+                  Experience unparalleled speed with our optimized performance.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-700">
+                <div className="rounded-full bg-purple-600 p-3">
+                  <CheckCircle className="h-8 w-8 text-white" />
                 </div>
-              </FadeIn>
-              <FadeIn delay={0.9}>
-                <div className="flex flex-col items-center space-y-4 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-700">
-                  <div className="rounded-full bg-purple-600 p-3">
-                    <Shield className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-300">
-                    Secure & Private
-                  </h3>
-                  <p className="text-center text-gray-600 dark:text-gray-300">
-                    Your data is protected with state-of-the-art encryption and
-                    privacy features.
-                  </p>
+                <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-300">
+                  User-Friendly
+                </h3>
+                <p className="text-center text-gray-600 dark:text-gray-300">
+                  Intuitive design ensures a smooth and enjoyable user
+                  experience.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-700">
+                <div className="rounded-full bg-purple-600 p-3">
+                  <Shield className="h-8 w-8 text-white" />
                 </div>
-              </FadeIn>
+                <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-300">
+                  Secure & Private
+                </h3>
+                <p className="text-center text-gray-600 dark:text-gray-300">
+                  Your data is protected with state-of-the-art encryption and
+                  privacy features.
+                </p>
+              </div>
             </div>
           </div>
         </section>
