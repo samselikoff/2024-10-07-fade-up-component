@@ -5,9 +5,9 @@ import { ReactNode, useEffect, useRef, useState } from "react";
 
 export default function Home() {
   return (
-    <div className="m-8 space-y-16">
+    <div className="m-20 space-y-16">
       {Array.from(Array(100).keys()).map((i) => (
-        <FadeUp delay={0.5} key={i}>
+        <FadeUp delay={0.25} duration={1} key={i}>
           <p className="text-2xl">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
             nemo iure, pariatur consequuntur, ad nam eveniet praesentium
